@@ -1,9 +1,13 @@
-﻿using System.Threading.Tasks;
+﻿using BusinessObjects.StatelessObjects.Grains;
+using System.Threading.Tasks;
+using Orleans;
 
 namespace BusinessObjects.StatelessObjects.Interfaces
 {
-    public interface IApp
+    public interface IApp : IGrainWithIntegerKey
     {
-        Task<object> GetAppInfo();
+        Task<AppInfo> GetAppInfo();
+
+        Task SetAppInfo(AppInfo info);
     }
 }
