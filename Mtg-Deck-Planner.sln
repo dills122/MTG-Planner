@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2041
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessObjects", "BusinessObjects\BusinessObjects.csproj", "{B64506F4-0378-4E38-822E-7AA53E4ED156}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BusinessObjects", "BusinessObjects\BusinessObjects.csproj", "{B64506F4-0378-4E38-822E-7AA53E4ED156}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repositories", "Repositories\Repositories.csproj", "{A42D1629-9614-4A4A-BCE2-47958032D831}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SiloServerCluster", "SiloServerCluster\SiloServerCluster.csproj", "{D40F7B40-024D-46F2-8ABF-E665EFF0BA5A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{B64506F4-0378-4E38-822E-7AA53E4ED156}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B64506F4-0378-4E38-822E-7AA53E4ED156}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B64506F4-0378-4E38-822E-7AA53E4ED156}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A42D1629-9614-4A4A-BCE2-47958032D831}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A42D1629-9614-4A4A-BCE2-47958032D831}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A42D1629-9614-4A4A-BCE2-47958032D831}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A42D1629-9614-4A4A-BCE2-47958032D831}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D40F7B40-024D-46F2-8ABF-E665EFF0BA5A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D40F7B40-024D-46F2-8ABF-E665EFF0BA5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D40F7B40-024D-46F2-8ABF-E665EFF0BA5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D40F7B40-024D-46F2-8ABF-E665EFF0BA5A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
