@@ -7,6 +7,7 @@ using BusinessObjects.StatelessObjects.Interfaces;
 using ClientApp.Shared;
 using Microsoft.AspNetCore.Mvc;
 using Orleans;
+using RetrievalService.Cards;
 
 namespace ClientApp.Server.Controllers
 {
@@ -21,7 +22,7 @@ namespace ClientApp.Server.Controllers
         }
 
         [HttpGet("[action]")]
-        public async Task<AppInfoView> AppInfo()
+        public async Task<CardViewModel> AppInfo()
         {
             if (!_client.IsInitialized)
             {
@@ -42,7 +43,22 @@ namespace ClientApp.Server.Controllers
                 AppName = appInfo.AppName
             };
 
-            return vm;
+            SearchCards search = new SearchCards();
+            var result = search.SearchByName("Adanto Vanguard");
+
+            if(result.IsSuccess)
+            {
+                var card = result.Value.First();
+                return new CardViewModel
+                {
+                    Colors = card.Colors.ToList(),
+                    ManaCost = card.ManaCost,
+                    ImgUrl = card.ImageUrl.ToString(),
+                    Name = card.Name
+                };
+            }
+
+            return null;
         }
 
         
