@@ -1,0 +1,35 @@
+﻿@page "/"
+@inject HttpClient HttpClient
+@using ClientApp.Shared
+
+<h1>Hello, world!</h1>
+
+Welcome to your new app.
+
+<SurveyPrompt Title="How is Blazor working for you?" />
+
+
+@if(vm != null)
+{
+    <h3>App Info </h3>
+    <p>
+        <span>@vm.AppId</span>
+        <span>@vm.AppName</span>
+    </p>
+}
+else
+{
+    <p><em>Loading...</em></p>
+}
+
+
+@functions {
+
+    AppInfoView vm;
+
+    protected override async Task OnInitAsync()
+    {
+        vm = await HttpClient.GetJsonAsync<AppInfoView>("api/OrleansTest/AppInfo");
+    }
+
+}
