@@ -15,6 +15,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\BusinessObjects\BusinessObjects.csproj" />
+    <ProjectReference Include="..\CardService\RetrievalService.csproj" />
     <ProjectReference Include="..\ClientApp.Client\ClientApp.Client.csproj" />
     <ProjectReference Include="..\ClientApp.Shared\ClientApp.Shared.csproj" />
     <ProjectReference Include="..\Repositories\Repositories.csproj" />

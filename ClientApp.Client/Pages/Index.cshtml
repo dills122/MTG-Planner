@@ -23,13 +23,48 @@ else
 }
 
 
+@if(cardVm != null)
+{
+    <div>
+        <div>
+            <div><h3>@cardVm.Name</h3></div>
+            <div>
+                <span>Mana Cost</span>
+                <span>@cardVm.ManaCost</span>
+            </div>
+            <div>
+                <span>Colors</span>
+                @foreach (var item in cardVm.Colors)
+                {
+                    <span>@item</span>
+                }
+            </div>
+        </div>
+        <div>
+            <h3>Card Image</h3>
+            <div>
+                <img src="@cardVm.ImgUrl" alt="@cardVm.Name Card Image" />
+            </div>
+        </div>
+    </div>
+}
+else
+{
+    <p><em>Loading Card Result..</em></p>
+}
+
+
 @functions {
 
     AppInfoView vm;
 
+    CardViewModel cardVm;
+
     protected override async Task OnInitAsync()
     {
-        vm = await HttpClient.GetJsonAsync<AppInfoView>("api/OrleansTest/AppInfo");
+        cardVm= await HttpClient.GetJsonAsync<CardViewModel>("api/OrleansTest/AppInfo");
+
+
     }
 
 }
