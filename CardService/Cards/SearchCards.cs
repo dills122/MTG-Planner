@@ -25,5 +25,16 @@ namespace RetrievalService.Cards
             }
             return new Exceptional<List<Card>>();
         }
+
+        public Exceptional<List<Card>> SearchBySet(string set)
+        {
+            var card = _service.Where(x => x.SetName, set).All();
+            if (card.IsSuccess)
+            {
+                return card;
+            }
+            return new Exceptional<List<Card>>();
+        }
+
     }
 }
