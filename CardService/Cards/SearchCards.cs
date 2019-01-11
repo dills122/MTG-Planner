@@ -55,5 +55,45 @@ namespace RetrievalService.Cards
             }
             return new Exceptional<Card>();
         }
+
+        public Exceptional<Card> SearchByManaCost(string setId)
+        {
+            var card = _service.Find(setId);
+            if (card.IsSuccess)
+            {
+                return card;
+            }
+            return new Exceptional<Card>();
+        }
+
+        public Exceptional<List<Card>> SearchByType(string setType)
+        {
+            var card = _service.Where(x => x.Type, setType).All();
+            if (card.IsSuccess)
+            {
+                return card;
+            }
+            return new Exceptional<List<Card>>();
+        }
+
+        public Exceptional<List<Card>> SearchByRarity(string setRarity)
+        {
+            var card = _service.Where(x => x.Rarity, setRarity).All();
+            if (card.IsSuccess)
+            {
+                return card;
+            }
+            return new Exceptional<List<Card>>();
+        }
+
+        //public Exceptional<Card> SearchByTypes(string setType)
+        //{
+        //    var card = _service.Where(x => x.Types.Contains(setType)).All();
+        //    if (card.IsSuccess)
+        //    {
+        //        return card;
+        //    }
+        //    return new Exceptional<Card>();
+        //}
     }
 }
