@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 
-namespace Repositories.Repository
+namespace Repositories.Abstraction
 {
     public class UnitOfWork : IUnitOfWork
     {

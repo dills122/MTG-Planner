@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System;
 
-namespace Repositories.Repository
+namespace Repositories.Abstraction
 {
     public interface IUnitOfWork : IDisposable
     {
