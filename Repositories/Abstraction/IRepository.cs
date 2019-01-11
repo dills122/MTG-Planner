@@ -1,4 +1,4 @@
-﻿namespace Repositories.Repository
+﻿namespace Repositories.Abstraction
 {
     public interface IRepository<TEntity, in TKey> where TEntity : class
     {
