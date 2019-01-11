@@ -36,5 +36,24 @@ namespace RetrievalService.Cards
             return new Exceptional<List<Card>>();
         }
 
+        public Exceptional<Card> SearchByID(string setId)
+        {
+            var card = _service.Find(setId);
+            if (card.IsSuccess)
+            {
+                return card;
+            }
+            return new Exceptional<Card>();
+        }
+
+        public Exceptional<Card> SearchByMultiID(int setId)
+        {
+            var card = _service.Find(setId);
+            if (card.IsSuccess)
+            {
+                return card;
+            }
+            return new Exceptional<Card>();
+        }
     }
 }
