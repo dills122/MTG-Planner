@@ -86,6 +86,16 @@ namespace RetrievalService.Cards
             return new Exceptional<List<Card>>();
         }
 
+        public Exceptional<List<Card>> SearchByReleaseDate(string setReleaseDate)
+        {
+            var card = _service.Where(x => x.Rarity, setReleaseDate).All();
+            if (card.IsSuccess)
+            {
+                return card;
+            }
+            return new Exceptional<List<Card>>();
+        }
+
         //public Exceptional<Card> SearchByTypes(string setType)
         //{
         //    var card = _service.Where(x => x.Types.Contains(setType)).All();
