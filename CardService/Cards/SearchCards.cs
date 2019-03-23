@@ -105,5 +105,16 @@ namespace RetrievalService.Cards
         //    }
         //    return new Exceptional<Card>();
         //}
+
+        public Exceptional<List<Card>> SearchByNameAndSetName(string name, string setName)
+        {
+            var card = _service.Where(x => x.Name, name)
+                .Where(s => s.SetName, setName).All();
+            if (card.IsSuccess)
+            {
+                return card;
+            }
+            return new Exceptional<List<Card>>();
+        }
     }
 }
