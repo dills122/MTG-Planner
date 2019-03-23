@@ -9,12 +9,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Repositories", "Repositorie
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SiloServerCluster", "SiloServerCluster\SiloServerCluster.csproj", "{D40F7B40-024D-46F2-8ABF-E665EFF0BA5A}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClientApp.Server", "ClientApp.Server\ClientApp.Server.csproj", "{1641A393-4AED-43EF-B193-22AFFF5C9D2C}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClientApp.Client", "ClientApp.Client\ClientApp.Client.csproj", "{3E43130D-77AF-49AD-870F-74F3D34EE2FD}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClientApp.Shared", "ClientApp.Shared\ClientApp.Shared.csproj", "{FD960235-F969-4E3D-BE65-AD325E29C973}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RetrievalService", "CardService\RetrievalService.csproj", "{7D29B852-0AC7-45B3-A38D-804290E02866}"
 EndProject
 Global
